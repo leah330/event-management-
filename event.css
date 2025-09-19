@@ -1,0 +1,169 @@
+
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li {
+    margin-left: 2rem;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: #f4a261;
+}
+
+/* Hero Section */
+.hero {
+    background: url('../images/hero-bg.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #f4a261;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #f4a261;
+}
+.cta-button {
+    background: #f4a261;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.cta-button:hover {
+    background: #e76f51;
+}
+
+/* Services Section */
+.services {
+    padding: 2rem;
+    text-align: center;
+}
+.services h2 {
+    margin-bottom: 2rem;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+.service-card {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.service-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.service-card h3 {
+    margin: 1rem 0;
+}
+.service-card a {
+    color: #f4a261;
+    text-decoration: none;
+}
+.service-card a:hover {
+    color: #e76f51;
+}
+
+/* Quick Booking Form */
+.quick-booking {
+    padding: 2rem;
+    background: #f4f4f4;
+    text-align: center;
+}
+.quick-booking h2 {
+    margin-bottom: 1rem;
+}
+.quick-booking form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+.quick-booking input, .quick-booking select, .quick-booking button {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.quick-booking button {
+    background: #f4a261;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.quick-booking button:hover {
+    background: #e76f51;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+
