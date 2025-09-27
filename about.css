@@ -55,36 +55,9 @@ h4{
 align-content: space-between;
 font-size: 900;
 font-weight: 400;
-
-
-
-  font-size: 24px;
-  animation: colorChange 3s infinite alternate;
-
-
-@keyframes colorChange {
-  from { color: red; }
-  to { color: blue; }
 }
 
-
-
-
-
-
-
-
-
-
-}
-.us img{
-    align-items: right;
     
-    
-
-    
-    
-}
 h1{
     color: #f4a261;
    margin-left: 15px;

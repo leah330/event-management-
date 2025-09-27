@@ -1,0 +1,114 @@
+
+    </section><!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .quick-booking {
+    padding: 2rem;
+    background: #f4f4f4;
+    text-align: center;
+}
+.quick-booking h2 {
+    margin-bottom: 1rem;
+}
+.quick-booking form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+.quick-booking input, .quick-booking select, .quick-booking button {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.quick-booking button {
+    background: #f4a261;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.quick-booking button:hover {
+    background: #e76f51;
+}
+        </style>
+    </head>
+    <body>
+        
+   <!-- Quick Booking Form -->
+    <section class="quick-booking">
+        <h2>Get Started</h2>
+        <form id="quick-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="phone number" placeholder="phone number" required>
+            <input type="text" placeholder="enter location" required>
+             <select required>
+                <option value="">select number of attendee</option>
+                <option value="wedding">below 50</option>
+                <option value="birthday">50-100</option>
+                <option value="conference">100-200</option>
+                <option value="babyshower">200-300</option>
+                <option value="babyshower">300-400</option>
+                <option value="babyshower">400+</option>
+            </select>
+            <input type="date" placeholder="date" required>
+            <input type="time" placeholder="time" required>
+
+            <select required>
+                <option value="">Select Event Type</option>
+                <option value="wedding">Wedding</option>
+                <option value="birthday">Birthday</option>
+                <option value="conference">Conference</option>
+                <option value="babyshower">Baby Shower</option>
+            </select>
+            <button type="submit">Submit</button>
+            <button type="edit">Edit</button>
+        </form>
+
+
+
+
+
+
+
+
+
+        <script>
+
+document.getElementById("quick-form").addEventListener("submit", function(event) {
+  event.preventDefault(); // stop page reload
+
+  // get values
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const location = document.getElementById("location").value;
+  const attendees = document.getElementById("attendees").value;
+  const date = document.getElementById("date").value;
+  const time = document.getElementById("time").value;
+  const eventType = document.getElementById("event").value;
+
+  // show confirmation
+  document.getElementById("message").innerText =
+    `✅ Thank you, ${name}! Your ${eventType} is booked for ${date} at ${time} 
+    in ${location} with ${attendees} attendees. We’ll contact you at ${email} / ${phone}.`;
+
+  
+});
+
+
+document.getElementById("editBtn").addEventListener("click", function() {
+  document.getElementById("quick-form").reset(); 
+  document.getElementById("message").innerText = ""; 
+});
+
+
+        </script>
+        
+    </body>
+    </html>
