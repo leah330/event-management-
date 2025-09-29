@@ -6,6 +6,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <style>
+
+/* Navigation */
+nav {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li {
+    margin-left: 2rem;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: #f4a261;
+}
+
+
+
             .quick-booking {
     padding: 2rem;
     background: #f4f4f4;
@@ -38,8 +69,22 @@
         </style>
     </head>
     <body>
+
+
+
+
+         <nav>
+        <div class="logo">LeaPRO Events</div>
+        <ul>
+            <li><a href="event.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="form.html">Book Now</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
         
-   <!-- Quick Booking Form -->
+   
     <section class="quick-booking">
         <h2>Get Started</h2>
         <form id="quick-form">
@@ -81,9 +126,9 @@
         <script>
 
 document.getElementById("quick-form").addEventListener("submit", function(event) {
-  event.preventDefault(); // stop page reload
+  event.preventDefault(); 
 
-  // get values
+  
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
@@ -93,7 +138,7 @@ document.getElementById("quick-form").addEventListener("submit", function(event)
   const time = document.getElementById("time").value;
   const eventType = document.getElementById("event").value;
 
-  // show confirmation
+ 
   document.getElementById("message").innerText =
     `✅ Thank you, ${name}! Your ${eventType} is booked for ${date} at ${time} 
     in ${location} with ${attendees} attendees. We’ll contact you at ${email} / ${phone}.`;

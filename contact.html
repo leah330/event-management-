@@ -1,0 +1,227 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Event Manager Website 🎉</title>
+  <style>
+  /* Page styling */
+
+
+
+
+
+
+
+
+
+
+  
+body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+      min-height: 100vh;
+      background: url("https://tsquareeventsanddecor.co.ke/wp-content/uploads/2025/04/480285529_618608924281940_7855813291503990647_n.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: rgb(8, 80, 8);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+
+
+nav {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    border-radius: 20px;
+    box-shadow: rgb(29, 29, 29);
+   
+}
+
+nav :hover{
+  background-color: #63676c;
+}
+
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li {
+    margin-left: 2rem;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: #f4a261;
+}
+
+
+
+    /* Dark transparent overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.25); /* adjust transparency */
+      z-index: -1;
+    }
+
+    /* Title styling */
+    h1 {
+      font-size: 2.5rem;
+      color: #0552d7;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      margin-bottom: 15px;
+    }
+
+    /* Intro text */
+    p {
+      font-size: 1.2rem;
+      color: #0552d7;
+      margin-bottom: 30px;
+    }
+
+    /* Content card */
+    .content {
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      backdrop-filter: blur(6px); /* glassmorphism effect */
+    }
+
+    .content h2 {
+      font-size: 1.8rem;
+      color: #0552d7;
+      margin-bottom: 10px;
+    }
+
+    .content p {
+      font-size: 1rem;
+      color: #0552d7;
+      line-height: 1.6;
+    }
+
+    /* Floating chat bubble */
+    #chatbot-bubble {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0078ff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 9999;
+      transition: transform 0.2s;
+    }
+
+    #chatbot-bubble:hover {
+      transform: scale(1.1);
+    }
+
+    #chatbot-bubble img {
+      width: 30px;
+      height: 30px;
+    }
+
+    /* Chat window */
+    #chatbot-window {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 350px;
+      height: 500px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      display: none;
+      z-index: 9999;
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+        <div class="logo">LeaPRO Events</div>
+        <ul>
+            <li><a href="event.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="form.html">Book Now</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+
+  <h1>Welcome to My Event Manager Website 🎉</h1>
+  <p>Chat with our assistant below to manage your events.</p>
+  
+  <div class="content">
+    <h2>What is EventChatBot?</h2>
+    <p>
+      EventChatBot is your personal event manager assistant.  
+      You can ask me about scheduling, venue details, reminders, and even 
+      manage your event guest lists.  
+      Just click on the chat bubble below to start chatting with your assistant! 💬
+    </p>
+  </div>
+
+
+
+  <!-- Chat Bubble -->
+  <div id="chatbot-bubble">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/speech-bubble.png" alt="Chat">
+  </div>
+
+  <!-- Chat Window (Lex Web UI iframe) -->
+  <iframe 
+    id="chatbot-window" 
+    src="https://d3qhv4b7u3bsg2.cloudfront.net/index.html">
+  </iframe>
+
+  <script>
+    const bubble = document.getElementById("chatbot-bubble");
+    const chatbotWindow = document.getElementById("chatbot-window");
+
+    bubble.addEventListener("click", () => {
+      if (chatbotWindow.style.display === "none") {
+        chatbotWindow.style.display = "block";
+      } else {
+        chatbotWindow.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
